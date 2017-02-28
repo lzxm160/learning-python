@@ -46,5 +46,13 @@ def test_pandas():
 	apple.to_csv('apple-data.csv')
 	df=pd.read_csv('apple-data.csv',index_col='Date',parse_dates=True)
 	df.head()
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+def test_draw():
+	df=pd.read_csv('apple-data.csv',index_col='Date',parse_dates=True)
+	df['H-L']=df.high-df.low
+	df['50MA']=pd.rolling_mean(df['Close'],50)
+	df[['Open','High','Low','Close','50MA']].plot()
+	plt.show()
 if __name__ == '__main__':
 	test_pandas()
