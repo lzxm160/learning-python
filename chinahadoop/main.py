@@ -9,5 +9,5 @@ random.shuffle(items)
 print items
 print random.sample([1,2,3,4,5,6,7,8,9],5)
 weighted_choices=[('three',3),('two',2),('one',1)]
-population=[var for val,cnt in weighted_choices for i in range(cnt)]
+population=[var for var,cnt in weighted_choices for i in range(cnt)]
 print random.choice(population)
