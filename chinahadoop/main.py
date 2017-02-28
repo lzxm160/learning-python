@@ -20,7 +20,19 @@ def next_5digit_int():
 	current_time=datetime.datetime.now().time()
 	random_no=int(current_time.strftime('%S%f'))
 	return random_no/1000
-if __name__ == '__main__':
+def test():
 	for x in range(0,10):
 		i=next_5digit_int()
 		print i
+import numpy as np
+def test_numpy():
+	x=np.random.random(10)
+	print x
+	mean=x.mean()
+	print mean
+	std=x.std()
+	print std
+	var=x.var()
+	print var
+if __name__ == '__main__':
+	test_numpy()
