@@ -73,4 +73,4 @@ def test_3d():
 	plt.show()
 
 if __name__ == '__main__':
-	test_draw()
+	test_3d()
