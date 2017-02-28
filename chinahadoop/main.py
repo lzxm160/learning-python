@@ -55,4 +55,4 @@ def test_draw():
 	df[['Open','High','Low','Close','50MA']].plot()
 	plt.show()
 if __name__ == '__main__':
-	test_pandas()
+	test_draw()
