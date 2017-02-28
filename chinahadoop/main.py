@@ -36,12 +36,12 @@ def test_numpy():
 	print var
 import pandas as pd
 import datetime
-from pandas.io import data
+import pandas_datareader.data as web
 
 def test_pandas():
 	start=datetime.datetime(2014,10,1)
 	end=datetime.datetime(2015,1,31)
-	apple=pd.io.data.get_data_yahoo('AAPL',start,end)
+	apple=web.get_data_yahoo('AAPL',start,end)
 	print (apple.head())
 	apple.to_csv('apple-data.csv')
 	df=pd.read_csv('apple-data.csv',index_col='date',parse_dates=True)
