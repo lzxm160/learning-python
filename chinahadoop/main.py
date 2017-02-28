@@ -44,7 +44,7 @@ def test_pandas():
 	apple=web.get_data_yahoo('AAPL',start,end)
 	print (apple.head())
 	apple.to_csv('apple-data.csv')
-	df=pd.read_csv('apple-data.csv',index_col='date',parse_dates=True)
+	df=pd.read_csv('apple-data.csv',index_col='Date',parse_dates=True)
 	df.head()
 if __name__ == '__main__':
 	test_pandas()
