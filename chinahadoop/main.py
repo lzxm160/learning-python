@@ -36,7 +36,7 @@ def test_numpy():
 	print var
 import pandas as pd
 import datetime
-from pandas_datareader import data
+from pandas.io import data
 
 def test_pandas():
 	start=datetime.datetime(2014,10,1)
