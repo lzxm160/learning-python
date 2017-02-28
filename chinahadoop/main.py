@@ -54,5 +54,23 @@ def test_draw():
 	df['50MA']=pd.rolling_mean(df['Close'],50)
 	df[['Open','High','Low','Close','50MA']].plot()
 	plt.show()
+def test_3d():
+	df=pd.read_csv('apple-data.csv',parse_dates=True)
+	print df.head()
+	df['H-L']=df.High-df.Low
+	df['50MA']=pd.rolling_mean(df['Close'],50)
+	threedee=plt.figure().gca(projection='3d')
+	threedee.scatter(df.index,df['H-L'],df['Close'])
+	threedee.set_xlabel('Index')
+	threedee.set_ylabel('H-L')
+	threedee.set_zlabel('Close')
+	plt.show()
+	threedee=plt.figure().gca(projection='3d')
+	threedee.scatter(df.index,df['H-L'],df['Volume'])
+	threedee.set_xlabel('Index')
+	threedee.set_ylabel('H-L')
+	threedee.set_zlabel('Volume')
+	plt.show()
+
 if __name__ == '__main__':
 	test_draw()
