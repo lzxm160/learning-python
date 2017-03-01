@@ -77,5 +77,8 @@ def test_pandas():
 	print type(ser_obj.values)
 	print type(ser_obj.index)
 	print ser_obj
+	print ser_obj*2
+	print ser_obj>15
+
 if __name__ == '__main__':
 	test_pandas()
