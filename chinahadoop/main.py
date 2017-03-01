@@ -79,9 +79,12 @@ def test_pandas():
 	# print ser_obj
 	# print ser_obj*2
 	# print ser_obj>15
-	year_data={2001:17.8,2002:20.1,2003:16.5}
-	ser_obj=pd.Series(year_data)
-	print ser_obj.head()
-	print ser_obj.index
+	# year_data={2001:17.8,2002:20.1,2003:16.5}
+	# ser_obj=pd.Series(year_data)
+	# print ser_obj.head()
+	# print ser_obj.index
+	array=np.random.randn(5,4)
+	df_obj=pd.DataFrame(array)
+	print df_obj.head()
 if __name__ == '__main__':
 	test_pandas()
