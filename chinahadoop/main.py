@@ -72,13 +72,16 @@ def test_3d():
 	threedee.set_zlabel('Volume')
 	plt.show()
 def test_pandas():
-	ser_obj=pd.Series(range(10,20))
-	print type(ser_obj)
-	print type(ser_obj.values)
-	print type(ser_obj.index)
-	print ser_obj
-	print ser_obj*2
-	print ser_obj>15
-
+	# ser_obj=pd.Series(range(10,20))
+	# print type(ser_obj)
+	# print type(ser_obj.values)
+	# print type(ser_obj.index)
+	# print ser_obj
+	# print ser_obj*2
+	# print ser_obj>15
+	year_data={2001:17.8,2002:20.1,2003:16.5}
+	ser_obj=pd.Series(year_data)
+	print ser_obj.head()
+	print ser_obj.index
 if __name__ == '__main__':
 	test_pandas()
