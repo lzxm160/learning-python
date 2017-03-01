@@ -71,6 +71,10 @@ def test_3d():
 	threedee.set_ylabel('H-L')
 	threedee.set_zlabel('Volume')
 	plt.show()
-
+def test_pandas():
+	ser_obj=pd.Series(range(10,20))
+	print type(ser_obj)
+	print type(ser_obj.values)
+	print type(ser_obj.index)
 if __name__ == '__main__':
-	test_3d()
+	test_pandas()
