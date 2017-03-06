@@ -12,8 +12,19 @@ start=time()
 for num in range(0,50):
 	req = urllib2.Request("http://172.18.100.85:9888/po/deliver_goods")
 	result = urllib2.urlopen(req, json_data)
-	print '\n'.join(result.readlines())
+	# print '\n'.join(result.readlines())
 
 
 finish=time()
-print (finish-start)*1000/50
+print (finish-start)*1000/50,"ms"
+
+start1=time()
+query_data={"operation":"QUERY_SESSION","requestData":[{"sessionId":"J57B5D55ERJHZXDPL1R2"}],"requestor":"apollo-employee-portal","requestTime":"2015-05-25 08:00:00"}
+for num in range(0,50):
+	req = urllib2.Request("http://172.18.100.85:8088/apollo")
+	result = urllib2.urlopen(req, query_data)
+	# print '\n'.join(result.readlines())
+
+
+finish1=time()
+print (finish1-start1)*1000/50,"ms"
