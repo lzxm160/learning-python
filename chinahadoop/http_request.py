@@ -15,4 +15,4 @@ for num in range(0,50):
 
 
 finish=clock()
-print (finish-start)/1000000/50
+print (finish-start)/50
