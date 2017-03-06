@@ -29,3 +29,14 @@ for num in range(0,50):
 
 finish1=time()
 print (finish1-start1)*1000/50,"ms"
+
+start2=time()
+for num in range(0,50):
+	print urllib2.urlopen("http://127.0.0.1:9888/pdf").read()
+
+finish2=time()
+print (finish2-start2)*1000/50,"ms"
+
+
+
+
