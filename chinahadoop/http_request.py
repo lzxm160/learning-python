@@ -10,7 +10,7 @@ start=time()
 
     
 for num in range(0,50):
-	req = urllib2.Request("http://172.18.100.85:9888/po/deliver_goods")
+	req = urllib2.Request("http://172.18.100.72:9888/po/deliver_goods")
 	result = urllib2.urlopen(req, json_data)
 	# print '\n'.join(result.readlines())
 
