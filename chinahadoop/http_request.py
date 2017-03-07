@@ -18,24 +18,24 @@ for num in range(0,50):
 finish=time()
 print (finish-start)*1000/50,"ms"
 
-start1=time()
-query_data={"operation":"QUERY_SESSION","requestData":[{"sessionId":"J57B5D55ERJHZXDPL1R2"}],"requestor":"apollo-employee-portal","requestTime":"2015-05-25 08:00:00"}
-json_data1 = json.dumps(query_data)
-for num in range(0,50):
-	req = urllib2.Request("http://172.18.100.85:8088/apollo")
-	result = urllib2.urlopen(req, json_data1)
-	# print '\n'.join(result.readlines())
+# start1=time()
+# query_data={"operation":"QUERY_SESSION","requestData":[{"sessionId":"J57B5D55ERJHZXDPL1R2"}],"requestor":"apollo-employee-portal","requestTime":"2015-05-25 08:00:00"}
+# json_data1 = json.dumps(query_data)
+# for num in range(0,50):
+# 	req = urllib2.Request("http://172.18.100.85:8088/apollo")
+# 	result = urllib2.urlopen(req, json_data1)
+# 	# print '\n'.join(result.readlines())
 
 
-finish1=time()
-print (finish1-start1)*1000/50,"ms"
+# finish1=time()
+# print (finish1-start1)*1000/50,"ms"
 
-start2=time()
-for num in range(0,50):
-	print urllib2.urlopen("http://127.0.0.1:9888/pdf").read()
+# start2=time()
+# for num in range(0,50):
+# 	print urllib2.urlopen("http://127.0.0.1:9888/pdf").read()
 
-finish2=time()
-print (finish2-start2)*1000/50,"ms"
+# finish2=time()
+# print (finish2-start2)*1000/50,"ms"
 
 
 
