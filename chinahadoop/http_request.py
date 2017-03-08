@@ -63,7 +63,16 @@ def test_process_pdf():
 		print status,output
 	finish=time()
 	print (finish-start)*1000/50,"ms"	
+def test_asiofcgi_pdf():
+	start=time()
+	for num in range(0,50):
+		req = urllib2.Request("http://172.18.100.85/pdf")
+		result = urllib2.urlopen(req)
+		print '\n'.join(result.readlines())
+	finish=time()
+	print (finish-start)*1000/50,"ms"
+	
 if __name__ == '__main__':
-	test_pdf()
+	# test_pdf()
 	# test_process_pdf()
-
+	test_asiofcgi_pdf()
