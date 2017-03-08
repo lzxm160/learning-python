@@ -46,7 +46,7 @@ def test_check_deliver_notes_commercial_invoice():
 def test_pdf():
 	start=time()
 	for num in range(0,50):
-		req = urllib2.Request("http://172.18.100.85:9888/pdf")
+		req = urllib2.Request("http://172.18.100.85:9888/pdf/src/dst")
 		result = urllib2.urlopen(req)
 		print '\n'.join(result.readlines())
 	finish=time()
