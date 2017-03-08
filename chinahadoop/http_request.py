@@ -43,7 +43,8 @@ def test_check_deliver_notes_commercial_invoice():
 	req = urllib2.Request("http://172.18.100.72:9888/po/deliver_goods")
 	result = urllib2.urlopen(req, json_data)
 	print '\n'.join(result.readlines())
-pdf_data={"src":"/root/Newshop_International/WEB-INF/quotation_pdf.html","dst":"test.pdf"}
+# pdf_data={"src":"/root/Newshop_International/WEB-INF/quotation_pdf.html","dst":"test.pdf"}
+pdf_data={"src":"http://www.runoob.com/go/go-map.html","dst":"test.pdf"}
 json_pdf_data = json.dumps(pdf_data)
 def test_pdf():
 	start=time()
