@@ -43,11 +43,13 @@ def test_check_deliver_notes_commercial_invoice():
 	req = urllib2.Request("http://172.18.100.72:9888/po/deliver_goods")
 	result = urllib2.urlopen(req, json_data)
 	print '\n'.join(result.readlines())
+pdf_data={"src":"/root/Newshop_International/WEB-INF/quotation_pdf.html","dst":"test.pdf"}
+json_pdf_data = json.dumps(pdf_data)
 def test_pdf():
 	start=time()
 	for num in range(0,50):
-		req = urllib2.Request("http://172.18.100.85:9888/pdf/src/dst")
-		result = urllib2.urlopen(req)
+		req = urllib2.Request("http://172.18.100.85:9888/pdf")
+		result = urllib2.urlopen(req,json_pdf_data)
 		print '\n'.join(result.readlines())
 	finish=time()
 	print (finish-start)*1000/50,"ms"
