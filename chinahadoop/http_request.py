@@ -56,7 +56,7 @@ def test_process_pdf():
 
 	start=time()
 	for num in range(0,50):
-		status, output = commands.getstatusoutput("/usr/local/wkhtmltox/bin/wkhtmltopdf /root/Newshop_International/WEB-INF/quotation_pdf.html /root/Newshop_International/WEB-INF/testprocess.pdf")
+		status, output = commands.getstatusoutput("/usr/local/wkhtmltox/bin/wkhtmltopdf /root/Newshop_International/WEB-INF/quotation_pdf.html /root/go_fcgi/testprocess.pdf")
 		print status,output
 	finish=time()
 	print (finish-start)*1000/50,"ms"	
