@@ -44,7 +44,7 @@ def test_check_deliver_notes_commercial_invoice():
 	result = urllib2.urlopen(req, json_data)
 	print '\n'.join(result.readlines())
 # pdf_data={"src":"/root/Newshop_International/WEB-INF/quotation_pdf.html","dst":"test.pdf"}
-pdf_data={"src":"http://www.runoob.com/go/go-map.html","dst":"test.pdf"}
+pdf_data={"src":"/root/go_fcgi/src/wkhtmltox/test.html","dst":"test.pdf"}
 json_pdf_data = json.dumps(pdf_data)
 def test_pdf():
 	start=time()
