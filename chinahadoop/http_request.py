@@ -51,6 +51,16 @@ def test_pdf():
 		print '\n'.join(result.readlines())
 	finish=time()
 	print (finish-start)*1000/50,"ms"
+def test_process_pdf():
+	import commands
+
+	start=time()
+	for num in range(0,50):
+		status, output = commands.getstatusoutput("/usr/local/wkhtmltox/bin/wkhtmltopdf /root/Newshop_International/WEB-INF/quotation_pdf.html /root/Newshop_International/WEB-INF/test.pdf")
+		print status
+	finish=time()
+	print (finish-start)*1000/50,"ms"	
 if __name__ == '__main__':
-	test_pdf()
+	# test_pdf()
+	test_process_pdf()
 
