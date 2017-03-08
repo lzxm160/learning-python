@@ -61,6 +61,6 @@ def test_process_pdf():
 	finish=time()
 	print (finish-start)*1000/50,"ms"	
 if __name__ == '__main__':
-	# test_pdf()
-	test_process_pdf()
+	test_pdf()
+	# test_process_pdf()
 
