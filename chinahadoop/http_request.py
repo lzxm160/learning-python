@@ -48,7 +48,7 @@ pdf_data={"src":"/root/Newshop_International/WEB-INF/quotation_pdf.html","dst":"
 json_pdf_data = json.dumps(pdf_data)
 def test_pdf():
 	start=time()
-	for num in range(0,2):
+	for num in range(0,50):
 		req = urllib2.Request("http://172.18.100.85:9888/pdf")
 		result = urllib2.urlopen(req,json_pdf_data)
 		print '\n'.join(result.readlines())
@@ -71,8 +71,8 @@ def test_asiofcgi_pdf():
 		print '\n'.join(result.readlines())
 	finish=time()
 	print (finish-start)*1000/50,"ms"
-	
+
 if __name__ == '__main__':
-	# test_pdf()
+	test_pdf()
 	# test_process_pdf()
-	test_asiofcgi_pdf()
+	# test_asiofcgi_pdf()
