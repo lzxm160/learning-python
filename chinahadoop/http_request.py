@@ -75,7 +75,7 @@ def test_process_pdf_online():
 	print (finish-start)*1000/50,"ms"
 def test_pdf_online():
 	start=time()
-	pdf_data={"src":"http://wkhtmltopdf.org/libwkhtmltox/pagesettings.html#pageLoad","dst":"/root/go_fcgi/test.pdf"}
+	pdf_data={"src":"http://news.baidu.com/","dst":"/root/go_fcgi/test.pdf"}
 	json_pdf_data = json.dumps(pdf_data)
 	for num in range(0,10):
 		req = urllib2.Request("http://127.0.0.1:9888/pdf")
