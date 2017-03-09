@@ -92,7 +92,6 @@ def test_pdf_online():
 	print (finish-start)*1000/10,"ms"
 def python_pdf():
 	import pdfkit
-
 	pdfkit.from_url('http://wkhtmltopdf.org/libwkhtmltox/pagesettings.html#pageLoad', '/root/go_fcgi/python_test_online.pdf')
 	pdfkit.from_file('/root/Newshop_International/WEB-INF/quotation_pdf.html', '/root/go_fcgi/python_test.pdf')
 def test_redis():
@@ -110,6 +109,6 @@ if __name__ == '__main__':
 	# test_process_pdf()
 	# test_asiofcgi_pdf()
 	# test_process_pdf_online()
-	test_pdf_online()
+	# test_pdf_online()
 	python_pdf()
 	# test_redis() #1ms
