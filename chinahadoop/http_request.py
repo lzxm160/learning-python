@@ -63,16 +63,36 @@ def test_process_pdf():
 		print status,output
 	finish=time()
 	print (finish-start)*1000/50,"ms"	
+
+
 def test_asiofcgi_pdf():
 	start=time()
-	for num in range(0,50):
+	for num in range(0,10):
 		req = urllib2.Request("http://172.18.100.85/pdf")
 		result = urllib2.urlopen(req,json_pdf_data)
 		print '\n'.join(result.readlines())
 	finish=time()
+	print (finish-start)*1000/10,"ms"
+def test_process_pdf_online():
+	start=time()
+	for num in range(0,50):
+		status, output = commands.getstatusoutput("/usr/local/wkhtmltox/bin/wkhtmltopdf http://wkhtmltopdf.org/libwkhtmltox/pagesettings.html#pageLoad /root/go_fcgi/testprocess.pdf")
+		print status,output
+	finish=time()
 	print (finish-start)*1000/50,"ms"
-
+def test_pdf_online():
+	start=time()
+	pdf_data={"src":"http://wkhtmltopdf.org/libwkhtmltox/pagesettings.html#pageLoad","dst":"/root/go_fcgi/test.pdf"}
+	json_pdf_data = json.dumps(pdf_data)
+	for num in range(0,10):
+		req = urllib2.Request("http://172.18.100.85:9888/pdf")
+		result = urllib2.urlopen(req,json_pdf_data)
+		print '\n'.join(result.readlines())
+	finish=time()
+	print (finish-start)*1000/10,"ms"
 if __name__ == '__main__':
-	test_pdf()
+	# test_pdf()
 	# test_process_pdf()
 	# test_asiofcgi_pdf()
+	test_process_pdf_online()
+	test_pdf_online()
