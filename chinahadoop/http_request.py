@@ -6,7 +6,7 @@ data = {    "operation": "DeliverGoodsForPO",    "data": {        "request_syste
 json_data = json.dumps(data)
 from time import clock
 from time import time
-
+import commands
 def benchmark():
 	start=time()
 
@@ -55,7 +55,7 @@ def test_pdf():
 	finish=time()
 	print (finish-start)*1000/50,"ms"
 def test_process_pdf():
-	import commands
+	
 
 	start=time()
 	for num in range(0,50):
@@ -90,9 +90,16 @@ def test_pdf_online():
 		print '\n'.join(result.readlines())
 	finish=time()
 	print (finish-start)*1000/10,"ms"
+def python_pdf():
+	import pdfkit
+
+	pdfkit.from_url('http://wkhtmltopdf.org/libwkhtmltox/pagesettings.html#pageLoad', '/root/go_fcgi/python_test_online.pdf')
+	pdfkit.from_file('/root/Newshop_International/WEB-INF/quotation_pdf.html', '/root/go_fcgi/python_test.pdf')
+
 if __name__ == '__main__':
 	# test_pdf()
 	# test_process_pdf()
 	# test_asiofcgi_pdf()
 	test_process_pdf_online()
 	test_pdf_online()
+	python_pdf()
