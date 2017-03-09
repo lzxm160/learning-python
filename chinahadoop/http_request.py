@@ -92,7 +92,7 @@ def test_pdf_online():
 	print (finish-start)*1000/10,"ms"
 def python_pdf():
 	import pdfkit
-	config = pdfkit.configuration(wkhtmltopdf='/opt/bin/wkhtmltopdf')
+	config = pdfkit.configuration(wkhtmltopdf='/usr/local/wkhtmltox/bin/wkhtmltopdf')
 	# pdfkit.from_string(html_string, output_file, configuration=config)
 	pdfkit.from_url('http://wkhtmltopdf.org/libwkhtmltox/pagesettings.html#pageLoad', '/root/go_fcgi/python_test_online.pdf', configuration=config)
 	pdfkit.from_file('/root/Newshop_International/WEB-INF/quotation_pdf.html', '/root/go_fcgi/python_test.pdf', configuration=config)
