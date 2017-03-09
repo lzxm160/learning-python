@@ -75,7 +75,7 @@ def test_process_pdf_online():
 	print (finish-start)*1000/50,"ms"
 def test_pdf_online():
 	start=time()
-	pdf_data={"src":"http://news.baidu.com/","dst":"/root/go_fcgi/test.pdf"}
+	pdf_data={"src":"https://plus.google.com/","dst":"/root/go_fcgi/test.pdf"}
 	json_pdf_data = json.dumps(pdf_data)
 	for num in range(0,10):
 		req = urllib2.Request("http://127.0.0.1:9888/pdf")
@@ -149,9 +149,9 @@ if __name__ == '__main__':
 	# test_process_pdf()
 	# test_asiofcgi_pdf()
 	# test_process_pdf_online()
-	# test_pdf_online()
+	test_pdf_online()
 	# python_pdf()
-	test_redis() #1ms
-	test_redis_scm_day()
-	test_redis_scm_month()
-	test_redis_scm_year()
+	# test_redis() #1ms
+	# test_redis_scm_day()
+	# test_redis_scm_month()
+	# test_redis_scm_year()
