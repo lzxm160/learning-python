@@ -123,7 +123,7 @@ def test_pdf():
 def test_redis_scm_day():
 	start=time()
 	for num in range(0,50):
-		req = urllib2.Request("http://172.18.100.87:8088/scm_flow_no/JP/SO/day")
+		req = urllib2.Request("http://172.18.100.87:8088/scm_flow_no/JP/PO/day")
 		result = urllib2.urlopen(req)
 		print '\n'.join(result.readlines())
 	finish=time()
@@ -131,7 +131,7 @@ def test_redis_scm_day():
 def test_redis_scm_month():
 	start=time()
 	for num in range(0,50):
-		req = urllib2.Request("http://172.18.100.87:8088/scm_flow_no/JP/SO/month")
+		req = urllib2.Request("http://172.18.100.87:8088/scm_flow_no/JP/PO/month")
 		result = urllib2.urlopen(req)
 		print '\n'.join(result.readlines())
 	finish=time()
@@ -139,7 +139,7 @@ def test_redis_scm_month():
 def test_redis_scm_year():
 	start=time()
 	for num in range(0,50):
-		req = urllib2.Request("http://172.18.100.87:8088/scm_flow_no/JP/SO/year")
+		req = urllib2.Request("http://172.18.100.87:8088/scm_flow_no/JP/PO/year")
 		result = urllib2.urlopen(req)
 		print '\n'.join(result.readlines())
 	finish=time()
