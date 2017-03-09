@@ -111,10 +111,11 @@ def test_redis():
 	print (finish-start)*1000/10,"ms"
 
 def test_pdf():
-	pdf_data={"src":"/root/Newshop_International/WEB-INF/quotation_pdf.html","dst":"/root/go_fcgi/test.pdf"}
-	json_pdf_data = json.dumps(pdf_data)
+	
 	start=time()
 	for num in range(0,10):
+		pdf_data="{\"src\":\"/root/Newshop_International/WEB-INF/quotation_pdf.html\",\"dst\":\"/root/go_fcgi/test"+str(num)+".pdf\"}"
+		json_pdf_data = json.dumps(pdf_data)	
 		req = urllib2.Request("http://127.0.0.1:9888/pdf")
 		result = urllib2.urlopen(req,json_pdf_data)
 		print '\n'.join(result.readlines())
