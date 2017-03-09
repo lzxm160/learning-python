@@ -46,14 +46,7 @@ def test_check_deliver_notes_commercial_invoice():
 # pdf_data={"src":"/root/Newshop_International/WEB-INF/quotation_pdf.html","dst":"test.pdf"}
 pdf_data={"src":"/root/Newshop_International/WEB-INF/quotation_pdf.html","dst":"/root/go_fcgi/test.pdf"}
 json_pdf_data = json.dumps(pdf_data)
-def test_pdf():
-	start=time()
-	for num in range(0,50):
-		req = urllib2.Request("http://172.18.100.85:9888/pdf")
-		result = urllib2.urlopen(req,json_pdf_data)
-		print '\n'.join(result.readlines())
-	finish=time()
-	print (finish-start)*1000/50,"ms"
+
 def test_process_pdf():
 	
 
@@ -116,11 +109,22 @@ def test_redis():
 		print '\n'.join(result.readlines())
 	finish=time()
 	print (finish-start)*1000/10,"ms"
+
+def test_pdf():
+	pdf_data={"src":"/root/Newshop_International/WEB-INF/quotation_pdf.html","dst":"/root/go_fcgi/test.pdf"}
+	json_pdf_data = json.dumps(pdf_data)
+	start=time()
+	for num in range(0,50):
+		req = urllib2.Request("http://172.18.100.85:9888/pdf")
+		result = urllib2.urlopen(req,json_pdf_data)
+		print '\n'.join(result.readlines())
+	finish=time()
+	print (finish-start)*1000/50,"ms"
 if __name__ == '__main__':
-	# test_pdf()
+	test_pdf()
 	# test_process_pdf()
 	# test_asiofcgi_pdf()
 	# test_process_pdf_online()
 	# test_pdf_online()
-	python_pdf()
+	# python_pdf()
 	# test_redis() #1ms
