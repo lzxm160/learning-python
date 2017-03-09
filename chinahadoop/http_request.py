@@ -115,7 +115,7 @@ def test_pdf():
 	json_pdf_data = json.dumps(pdf_data)
 	start=time()
 	for num in range(0,50):
-		req = urllib2.Request("http://172.18.100.85:9888/pdf")
+		req = urllib2.Request("http://127.0.0.1:9888/pdf")
 		result = urllib2.urlopen(req,json_pdf_data)
 		print '\n'.join(result.readlines())
 	finish=time()
@@ -149,7 +149,7 @@ if __name__ == '__main__':
 	# test_process_pdf()
 	# test_asiofcgi_pdf()
 	# test_process_pdf_online()
-	test_pdf_online()
+	# test_pdf_online()
 	# python_pdf()
 	# test_redis() #1ms
 	# test_redis_scm_day()
