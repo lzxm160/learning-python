@@ -145,13 +145,13 @@ def test_redis_scm_year():
 	finish=time()
 	print (finish-start)*1000/50,"ms"
 if __name__ == '__main__':
-	# test_pdf()
+	test_pdf()
 	# test_process_pdf()
 	# test_asiofcgi_pdf()
 	# test_process_pdf_online()
-	# test_pdf_online()
+	test_pdf_online()
 	# python_pdf()
 	# test_redis() #1ms
-	test_redis_scm_day()
-	test_redis_scm_month()
-	test_redis_scm_year()
+	# test_redis_scm_day()
+	# test_redis_scm_month()
+	# test_redis_scm_year()
