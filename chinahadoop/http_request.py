@@ -120,11 +120,38 @@ def test_pdf():
 		print '\n'.join(result.readlines())
 	finish=time()
 	print (finish-start)*1000/50,"ms"
+def test_redis_scm_day():
+	start=time()
+	for num in range(0,50):
+		req = urllib2.Request("http://172.18.100.87:8088/scm_flow_no/JP/SO/day")
+		result = urllib2.urlopen(req,json_pdf_data)
+		print '\n'.join(result.readlines())
+	finish=time()
+	print (finish-start)*1000/50,"ms"
+def test_redis_scm_month():
+	start=time()
+	for num in range(0,50):
+		req = urllib2.Request("http://172.18.100.87:8088/scm_flow_no/JP/SO/month")
+		result = urllib2.urlopen(req,json_pdf_data)
+		print '\n'.join(result.readlines())
+	finish=time()
+	print (finish-start)*1000/50,"ms"
+def test_redis_scm_year():
+	start=time()
+	for num in range(0,50):
+		req = urllib2.Request("http://172.18.100.87:8088/scm_flow_no/JP/SO/year")
+		result = urllib2.urlopen(req,json_pdf_data)
+		print '\n'.join(result.readlines())
+	finish=time()
+	print (finish-start)*1000/50,"ms"
 if __name__ == '__main__':
-	test_pdf()
+	# test_pdf()
 	# test_process_pdf()
 	# test_asiofcgi_pdf()
 	# test_process_pdf_online()
 	# test_pdf_online()
 	# python_pdf()
 	# test_redis() #1ms
+	test_redis_scm_day()
+	test_redis_scm_month()
+	test_redis_scm_year()
