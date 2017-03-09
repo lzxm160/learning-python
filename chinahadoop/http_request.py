@@ -78,7 +78,7 @@ def test_pdf_online():
 	pdf_data={"src":"http://wkhtmltopdf.org/libwkhtmltox/pagesettings.html#pageLoad","dst":"/root/go_fcgi/test.pdf"}
 	json_pdf_data = json.dumps(pdf_data)
 	for num in range(0,10):
-		req = urllib2.Request("http://172.18.100.85:9888/pdf")
+		req = urllib2.Request("http://127.0.0.1:9888/pdf")
 		result = urllib2.urlopen(req,json_pdf_data)
 		print '\n'.join(result.readlines())
 	finish=time()
