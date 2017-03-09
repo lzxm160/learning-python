@@ -92,8 +92,10 @@ def test_pdf_online():
 	print (finish-start)*1000/10,"ms"
 def python_pdf():
 	import pdfkit
-	pdfkit.from_url('http://wkhtmltopdf.org/libwkhtmltox/pagesettings.html#pageLoad', '/root/go_fcgi/python_test_online.pdf')
-	pdfkit.from_file('/root/Newshop_International/WEB-INF/quotation_pdf.html', '/root/go_fcgi/python_test.pdf')
+	config = pdfkit.configuration(wkhtmltopdf='/opt/bin/wkhtmltopdf')
+	# pdfkit.from_string(html_string, output_file, configuration=config)
+	pdfkit.from_url('http://wkhtmltopdf.org/libwkhtmltox/pagesettings.html#pageLoad', '/root/go_fcgi/python_test_online.pdf', configuration=config)
+	pdfkit.from_file('/root/Newshop_International/WEB-INF/quotation_pdf.html', '/root/go_fcgi/python_test.pdf', configuration=config)
 def test_redis():
 	start=time()
 	pdf_data={"operation":"QUERY_SESSION","requestData":[{"sessionId":"J57B5D55ERJHZXDPL1R2"}],"requestor":"apollo-employee-portal","requestTime":"2015-05-25 08:00:00"}
