@@ -95,11 +95,21 @@ def python_pdf():
 
 	pdfkit.from_url('http://wkhtmltopdf.org/libwkhtmltox/pagesettings.html#pageLoad', '/root/go_fcgi/python_test_online.pdf')
 	pdfkit.from_file('/root/Newshop_International/WEB-INF/quotation_pdf.html', '/root/go_fcgi/python_test.pdf')
-
+def test_redis():
+	start=time()
+	pdf_data={"operation":"QUERY_SESSION","requestData":[{"sessionId":"J57B5D55ERJHZXDPL1R2"}],"requestor":"apollo-employee-portal","requestTime":"2015-05-25 08:00:00"}
+	json_pdf_data = json.dumps(pdf_data)
+	for num in range(0,10):
+		req = urllib2.Request("http://172.18.100.85:8088/apollo")
+		result = urllib2.urlopen(req,json_pdf_data)
+		print '\n'.join(result.readlines())
+	finish=time()
+	print (finish-start)*1000/10,"ms"
 if __name__ == '__main__':
 	# test_pdf()
 	# test_process_pdf()
 	# test_asiofcgi_pdf()
 	# test_process_pdf_online()
-	test_pdf_online()
-	python_pdf()
+	# test_pdf_online()
+	# python_pdf()
+	test_redis()
