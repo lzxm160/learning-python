@@ -114,7 +114,7 @@ def test_pdf():
 	pdf_data={"src":"/root/Newshop_International/WEB-INF/quotation_pdf.html","dst":"/root/go_fcgi/test.pdf"}
 	json_pdf_data = json.dumps(pdf_data)
 	start=time()
-	for num in range(0,50):
+	for num in range(0,1):
 		req = urllib2.Request("http://127.0.0.1:9888/pdf")
 		result = urllib2.urlopen(req,json_pdf_data)
 		print '\n'.join(result.readlines())
@@ -145,11 +145,11 @@ def test_redis_scm_year():
 	finish=time()
 	print (finish-start)*1000/50,"ms"
 if __name__ == '__main__':
-	# test_pdf()
+	test_pdf()
 	# test_process_pdf()
 	# test_asiofcgi_pdf()
 	# test_process_pdf_online()
-	test_pdf_online()
+	# test_pdf_online()
 	# python_pdf()
 	# test_redis() #1ms
 	# test_redis_scm_day()
