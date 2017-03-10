@@ -174,8 +174,8 @@ def test_athenapdf():
 	finish=time()
 	print (finish-start)*1000/10,"ms"
 if __name__ == '__main__':
-	test_athenapdf()
-	# test_pdf()
+	# test_athenapdf()
+	test_pdf()
 	# test_process_pdf()
 	# test_asiofcgi_pdf()
 	# test_process_pdf_online()
