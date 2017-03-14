@@ -69,8 +69,7 @@ app.jinja_env.loader = DictLoader({
     'document.html': '''
         <!doctype html>
         <title>Test document</title>
-        <link rel=stylesheet href="{{ url_for('static',
-                                              filename='style.css') }}" />
+        
         <body>
         <section>
             <nav>Get this document <a href="/pdf">as PDF</a></nav>
@@ -80,25 +79,7 @@ app.jinja_env.loader = DictLoader({
 })
 
 
-STATIC_FILES = {'style.css': ('text/css', '''
-    html { font-family: Fontin Sans, sans-serif }
-    section { width: 80%; margin: 2em auto }
-    a { color: inherit }
-    img { width: 100%; max-width: 600px; box-sizing: border-box;
-         border: 1px solid #888; }
-    /* Print-specific styles, ignored when rendering to screen: */
-    @page { size: A5; margin: 1cm }
-    @media print { nav { display: none } }
-''')}
 
-
-@app.route('/static/<path:filename>')
-def static(filename):
-    if filename in STATIC_FILES:
-        content_type, body = STATIC_FILES[filename]
-        return body, 200, {'Content-Type': content_type}
-    else:
-        abort(404)
 
 if __name__ == '__main__':
     run()
