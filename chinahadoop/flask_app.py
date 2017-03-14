@@ -45,13 +45,17 @@ def index():
     return redirect(url_for('document_html'))
 
 
+@app.route('/foo/')
+def document_html():
+    return render_template(
+        'document.html', data=[42, 27.3, 63], labels=['Lorem', 'ipsum', 'sit'])
 
 ### The code specific to Flask-WeasyPrint follows. Pretty simple, eh?
 
 from flask_weasyprint import render_pdf, HTML
 
 
-@app.route('/pdf')
+@app.route('/foo.pdf')
 def document_pdf():
     return render_pdf(url_for('index'))
 
@@ -78,6 +82,33 @@ app.jinja_env.loader = DictLoader({
         </section>
     ''',
 })
+
+
+STATIC_FILES = {'style.css': ('text/css', '''
+    html { font-family: Fontin Sans, sans-serif }
+    section { width: 80%; margin: 2em auto }
+    a { color: inherit }
+    img { width: 100%; max-width: 600px; box-sizing: border-box;
+         border: 1px solid #888; }
+    /* Print-specific styles, ignored when rendering to screen: */
+    @page { size: A5; margin: 1cm }
+    @media print { nav { display: none } }
+''')}
+
+
+@app.route('/static/<path:filename>')
+def static(filename):
+    if filename in STATIC_FILES:
+        content_type, body = STATIC_FILES[filename]
+        return body, 200, {'Content-Type': content_type}
+    else:
+        abort(404)
+
+
+@app.route(u'/Unïĉodé/<stuff>')
+@app.route(u'/foo bar/<stuff>')
+def funky_urls(stuff):
+    return unicode(stuff)
 
 
 if __name__ == '__main__':
