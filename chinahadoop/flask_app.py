@@ -21,7 +21,7 @@ def run():
     Run it with ``python -m flask_weasyprint.test_app`` or have a look
     at the source code.
     """
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=80,debug=True)
 # This function exits mostly to make a "view source" link in the docs.
 
 
