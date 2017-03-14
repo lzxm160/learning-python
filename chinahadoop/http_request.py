@@ -203,7 +203,7 @@ def test_go_process_local():
 	print (finish-start)*1000/10,"ms"
 def test_go_process_online():
 	start=time()
-	pdf_data={"src":"http://news.baidu.com/","dst":"/root/go_fcgi/test.pdf"}
+	pdf_data={"src":"http://haidecapital.com/","dst":"/root/go_fcgi/test.pdf"}
 	json_pdf_data = json.dumps(pdf_data)
 	for num in range(0,10):
 		req = urllib2.Request("http://127.0.0.1:9888/pdf2")
