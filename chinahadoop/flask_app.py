@@ -53,10 +53,25 @@ from flask_weasyprint import render_pdf, HTML
 
 @app.route('/pdf')
 def document_pdf():
-    HTML('http://weasyprint.org/').write_pdf('website.pdf')
-    return "ok"
+    # HTML('http://weasyprint.org/').write_pdf('website.pdf')
+    HTML(filename='/root/Newshop_International/WEB-INF/quotation_pdf.html').write_pdf('/root/go_fcgi/flask_test.pdf')
+    # start=time()
+    # for num in range(0,50):
+    #     req = urllib2.Request("http://172.18.100.85:8088/scm_flow_no/JP/PO/day")
+    #     result = urllib2.urlopen(req)
+    #     print '\n'.join(result.readlines())
+    # finish=time()
+    
+    # return (finish-start)*1000/50,"ms"
+    return 'ok'
+# HTML('../foo.html')  # Same as …
+# HTML(filename='../foo.html')
 
+# HTML('http://weasyprint.org')  # Same as …
+# HTML(url='http://weasyprint.org')
 
+# HTML(sys.stdin)  # Same as …
+# HTML(file_obj=sys.stdin)
 ### End of code specific to Flask-WeasyPrint.
 
 
