@@ -51,7 +51,7 @@ def index():
 from flask_weasyprint import render_pdf, HTML
 
 
-@app.route('/foo.pdf')
+@app.route('/pdf')
 def document_pdf():
     return render_pdf(url_for('index'))
 
@@ -80,31 +80,6 @@ app.jinja_env.loader = DictLoader({
 })
 
 
-STATIC_FILES = {'style.css': ('text/css', '''
-    html { font-family: Fontin Sans, sans-serif }
-    section { width: 80%; margin: 2em auto }
-    a { color: inherit }
-    img { width: 100%; max-width: 600px; box-sizing: border-box;
-         border: 1px solid #888; }
-    /* Print-specific styles, ignored when rendering to screen: */
-    @page { size: A5; margin: 1cm }
-    @media print { nav { display: none } }
-''')}
-
-
-@app.route('/static/<path:filename>')
-def static(filename):
-    if filename in STATIC_FILES:
-        content_type, body = STATIC_FILES[filename]
-        return body, 200, {'Content-Type': content_type}
-    else:
-        abort(404)
-
-
-@app.route(u'/Unïĉodé/<stuff>')
-@app.route(u'/foo bar/<stuff>')
-def funky_urls(stuff):
-    return unicode(stuff)
 
 
 if __name__ == '__main__':
