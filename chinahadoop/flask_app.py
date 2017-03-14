@@ -34,9 +34,16 @@ app = Flask(__name__, static_folder=None)
 ### it could come from a database or be computed on the fly.
 ### We could also make prettier graphs with Pygal: http://pygal.org/
 
+
+@app.config.from_object
+class Config:
+    GRAPH_COLORS = ['#0C3795', '#752641', '#E47F00']
+
+
 @app.route('/')
 def index():
     return redirect(url_for('document_html'))
+
 
 
 ### The code specific to Flask-WeasyPrint follows. Pretty simple, eh?
