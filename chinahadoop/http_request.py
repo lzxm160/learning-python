@@ -191,9 +191,19 @@ def test_weasyprint_process_pdf():
 		print status,output
 	finish=time()
 	print (finish-start)*1000/10,"ms"	
-def test_go_process_online():
+def test_go_process_local():
 	start=time()
 	pdf_data={"src":"/root/Newshop_International/WEB-INF/quotation_pdf.html","dst":"/root/go_fcgi/test.pdf"}
+	json_pdf_data = json.dumps(pdf_data)
+	for num in range(0,10):
+		req = urllib2.Request("http://127.0.0.1:9888/pdf2")
+		result = urllib2.urlopen(req,json_pdf_data)
+		print '\n'.join(result.readlines())
+	finish=time()
+	print (finish-start)*1000/10,"ms"
+def test_go_process_online():
+	start=time()
+	pdf_data={"src":"http://news.baidu.com/","dst":"/root/go_fcgi/test.pdf"}
 	json_pdf_data = json.dumps(pdf_data)
 	for num in range(0,10):
 		req = urllib2.Request("http://127.0.0.1:9888/pdf2")
