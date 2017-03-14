@@ -53,7 +53,7 @@ from flask_weasyprint import render_pdf, HTML
 
 @app.route('/pdf')
 def document_pdf():
-    return render_pdf(url_for('http://news.baidu.com/'))
+    return render_pdf(url_for('news.baidu.com'))
 
 
 ### End of code specific to Flask-WeasyPrint.
