@@ -183,8 +183,16 @@ def test_pdf2_online():
 		print '\n'.join(result.readlines())
 	finish=time()
 	print (finish-start)*1000/10,"ms"
+def test_weasyprint_process_pdf():
+	
+	start=time()
+	for num in range(0,10):
+		status, output = commands.getstatusoutput("/usr/local/wkhtmltox/bin/wkhtmltopdf /root/Newshop_International/WEB-INF/quotation_pdf.html /root/learning-python/flask.pdf")
+		print status,output
+	finish=time()
+	print (finish-start)*1000/10,"ms"	
 if __name__ == '__main__':
-	test_pdf2_online()
+	test_weasyprint_process_pdf()
 	# test_athenapdf()
 	# test_pdf()
 	# test_process_pdf()
