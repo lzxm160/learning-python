@@ -211,8 +211,19 @@ def test_go_process_online():
 		print '\n'.join(result.readlines())
 	finish=time()
 	print (finish-start)*1000/10,"ms"
+def test_asio_process_online():
+	start=time()
+	pdf_data={"src":"/root/Newshop_International/WEB-INF/quotation_pdf.html","dst":"/root/asio_coro_frame/build/release/bin/test.pdf"}
+	json_pdf_data = json.dumps(pdf_data)
+	for num in range(0,10):
+		req = urllib2.Request("http://127.0.0.1/pdf")
+		result = urllib2.urlopen(req,json_pdf_data)
+		print '\n'.join(result.readlines())
+	finish=time()
+	print (finish-start)*1000/10,"ms"
 if __name__ == '__main__':
-	test_go_process_online()
+	test_asio_process_online()
+	# test_go_process_online()
 	# test_athenapdf()
 	# test_pdf()
 	# test_process_pdf()
