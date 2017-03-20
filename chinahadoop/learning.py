@@ -15,5 +15,12 @@ def test_numpy():
 	print '-----------------'
 	x2d.shape=(9,2)
 	print x2d
+def test_numpy2():
+	a=np.matrix('1 2 3;4 5 6;7 8 9')
+	print a
+	b=np.matrix('4 5 6;7 8 9;10 11 12')
+	print b
+	print a*b
 if __name__ == '__main__':
-	test_numpy()
+	# test_numpy()
+	test_numpy2()
