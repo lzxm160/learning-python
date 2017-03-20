@@ -24,8 +24,8 @@ def test_numpy2():
 def test_numpy3():
 	import numpy.ma as ma
 	x=np.array([72,79,85,90,150,-135,120,-10,60,100])
-	mx=ma.mask_array(x,mask=[0,0,0,0,0,1,0,1,0,0])
-	mx2=ma.mask_array(x,mask=x<0)
+	mx=ma.masked_array(x,mask=[0,0,0,0,0,1,0,1,0,0])
+	mx2=ma.masked_array(x,mask=x<0)
 	print x.mean()
 	print mx.mean()
 	print mx2.mean()
