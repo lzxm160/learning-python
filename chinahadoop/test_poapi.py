@@ -41,8 +41,8 @@ data = {
             "uom":"PCS",
             "sub_total":3640.00,
             "warranty":3,
-            "comments":"",
-"note":""
+            "comments":"detail comments1",
+"note":"detail note1"
 },{
             "product_name":"Flood Light",
             "product_code":"RFL400AK01D06",
@@ -52,8 +52,8 @@ data = {
             "uom":"PCS",
             "sub_total":1378.00,
             "warranty":3,
-            "comments":"",
-"note":""
+            "comments":"detail comments2",
+"note":"detail note2"
 }]
 }
    }
