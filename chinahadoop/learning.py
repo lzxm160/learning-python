@@ -32,6 +32,12 @@ def test_numpy3():
 def test_numpy4():
 	print __doc__
 	print __name__
+	print ufunc.nin
+	print ufunc.nout
+	print ufunc.nargs
+	print ufunc.ntypes
+	print ufunc.types
+	print ufunc.identity
 if __name__ == '__main__':
 	# test_numpy()
 	# test_numpy2()
