@@ -29,7 +29,11 @@ def test_numpy3():
 	print x.mean()
 	print mx.mean()
 	print mx2.mean()
+def test_numpy4():
+	print __doc__
+	print __name__
 if __name__ == '__main__':
 	# test_numpy()
 	# test_numpy2()
-	test_numpy3()
+	# test_numpy3()
+	test_numpy4()
