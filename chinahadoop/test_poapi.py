@@ -20,7 +20,7 @@ data = {
 "supplier":"Renesola Shanghai",
          "requested_delivery_date":"2017-03-20 24:00:00",
 "trade_term":"EXW",
-         "payment_terms":"",
+         "payment_terms":"30 Days EOM The 15",
          "ship_via":"Sea",
          "export_country":"P.R.China",
          "loading_port":"Shenzhen",
