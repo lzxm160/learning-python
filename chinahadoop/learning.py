@@ -13,7 +13,7 @@ def test_numpy():
 	x2d.reshape(6,3)
 	print x2d
 	print '-----------------'
-	x2d.shape(9,2)
+	x2d.shape=(9,2)
 	print x2d
 if __name__ == '__main__':
 	test_numpy()
