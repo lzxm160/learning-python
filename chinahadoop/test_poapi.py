@@ -148,7 +148,7 @@ gdn_data={
         ]
     }
 }
-json_gdn_data = json.dumps(gdn_data)
+json_gdn_data = json.dumps(gdn_data,ensure_ascii=False)
 
 def test_gdn_data_api():
 	req = urllib2.Request("http://172.18.100.72:9888/po/deliver_goods")
