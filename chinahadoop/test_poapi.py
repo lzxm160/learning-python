@@ -86,7 +86,7 @@ gdn_data={
                 "loading_port": "Shenzhen",
                 "import_country": "France",
                 "unloading_port": "Amsterdam",
-                "logistic": "COSCO",
+                "logistic": "DHL",
                 "logistic_contact": "",
                 "logistic_contact_email": "",
                 "logistic_contact_telephone_number": "",
