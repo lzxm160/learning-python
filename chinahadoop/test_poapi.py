@@ -67,7 +67,7 @@ def test_po_api():
 	req = urllib2.Request("http://172.18.100.72:9888/po/submit")
 	result = urllib2.urlopen(req, json_data)
 	print '\n'.join(result.readlines())
-gdn_data={
+gdn_data=r'{
     "operation": "DeliverGoods",
     "data": {
         "request_system": 1,
@@ -147,12 +147,12 @@ gdn_data={
             }
         ]
     }
-}
-json_gdn_data = json.dumps(gdn_data)
+}'
+# json_gdn_data = json.dumps(gdn_data)
 
 def test_gdn_data_api():
 	req = urllib2.Request("http://172.18.100.72:9888/po/deliver_goods")
-	result = urllib2.urlopen(req, json_gdn_data)
+	result = urllib2.urlopen(req, gdn_data)
 	print '\n'.join(result.readlines())
 if __name__ == '__main__':
 	# test_po_api()
