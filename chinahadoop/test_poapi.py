@@ -115,8 +115,8 @@ gdn_data={
                     "pl_url": "/opt/renesola/apollo/file/pkl/PKL-FR-20170226-000196.pdf"
                 },
                 "bill_of_lading": {
-                    "bl_no": "",
-                    "bl_url": ""
+                    "bl_no": "bl_no",
+                    "bl_url": "/opt/renesola/apollo/file/ci/CI-FR-20170226-000196.pdf"
                 },
                 "associated_so": {
                     "associated_so_no": "SC-FR-20170226-000196",
