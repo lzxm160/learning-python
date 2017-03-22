@@ -15,7 +15,7 @@ data = {
             "company": "ReneSola France",
             "bill_type": "Purchase Order",
             "po_no": "PO-FR-20170216-001014",
-            "po_url": "/opt/renesola/apollo/file/po/PO-FR-20170216-001016.pdf",
+            "po_url": "/opt/renesola/apollo/file/ci/CI-FR-20170226-000196.pdf",
             "po_date": "2017-02-16 18:00:00",
             "created_by": "",
             "approved_by": "",
