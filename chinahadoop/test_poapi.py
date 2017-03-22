@@ -84,7 +84,7 @@ gdn_data={
                 "gdn_no": "GDN-FR-20170216-001014-001",
                 "po_no": "PO-FR-20170216-001014",
                 "supplier": "Renesola Shanghai",
-                " buyer": "George Wang",
+                "buyer": "George Wang",
                 "trade_term": "CIF",
                 "ship_via": "Sea",
                 "packing_method": "Pallet",
