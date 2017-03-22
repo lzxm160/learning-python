@@ -112,8 +112,8 @@ gdn_data={
                     "invoice_type": 0,
                     "total_amount": 5690.47,
                     "currency": "EUR",
-                    "created_by": "",
-                    "approved_by": "",
+                    "created_by": "created_by",
+                    "approved_by": "approved_by",
                     "note": ""
                 },
                 "packing_list": {
