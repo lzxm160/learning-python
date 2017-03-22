@@ -93,9 +93,9 @@ gdn_data={
                 "import_country": "France",
                 "unloading_port": "Amsterdam",
                 "logistic": "DHL",
-                "logistic_contact": "",
-                "logistic_contact_email": "",
-                "logistic_contact_telephone_number": "",
+                "logistic_contact": "logistic_contact",
+                "logistic_contact_email": "logistic_contact_email",
+                "logistic_contact_telephone_number": "logistic_contact_telephone_number",
                 "etd": "2017-02-28 17:00:00",
                 "eta": "2017-03-17 10:00:00",
                 "customs_clearance_date": "2017-03-18 10:00:00",
@@ -114,7 +114,7 @@ gdn_data={
                     "currency": "EUR",
                     "created_by": "created_by",
                     "approved_by": "approved_by",
-                    "note": ""
+                    "note": "note"
                 },
                 "packing_list": {
                     "pl_no": "PKL-FR-20170226-000196",
@@ -163,5 +163,5 @@ def test_gdn_data_api():
 	result = urllib2.urlopen(req, json_gdn_data)
 	print '\n'.join(result.readlines())
 if __name__ == '__main__':
-	test_po_api()
-	# test_gdn_data_api()
+	# test_po_api()
+	test_gdn_data_api()
