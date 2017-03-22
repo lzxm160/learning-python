@@ -88,7 +88,7 @@ gdn_data={
                 "trade_term": "CIF",
                 "ship_via": "Sea",
                 "packing_method": "Pallet",
-                "export_country": "P.R.China",
+                "export_country": "中国",
                 "loading_port": "Shenzhen",
                 "import_country": "France",
                 "unloading_port": "Amsterdam",
