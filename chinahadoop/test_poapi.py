@@ -16,24 +16,24 @@ data = {
             "po_no": "PO-FR-20170216-001014",
             "po_url": "/opt/renesola/apollo/file/ci/CI-FR-20170226-000196.pdf",
             "po_date": "2017-02-16 18:00:00",
-            "created_by": "",
-            "approved_by": "",
+            "created_by": "created_by",
+            "approved_by": "approved_by",
             "status": 1,
             "supplier": "Renesola Shanghai",
             "requested_delivery_date": "2017-03-20 24:00:00",
             "trade_term": "EXW",
-            "payment_terms": "",
+            "payment_terms": "payment_terms",
             "ship_via": "Sea",
             "export_country": "P.R.China",
             "loading_port": "Shenzhen",
             "import_country": "France",
             "unloading_port": "Amsterdam",
-            "certificate": "",
+            "certificate": "certificate",
             "total_quantity": 2400,
             "total_amount": 5690.47,
             "currency": "EUR",
-            "comments": "",
-            "note": "",
+            "comments": "comments",
+            "note": "note",
             "detail": [
                 {
                     "product_name": "Highbay",
@@ -44,8 +44,8 @@ data = {
                     "uom": "PCS",
                     "sub_total": 3640,
                     "warranty": 3,
-                    "comments": "",
-                    "note": ""
+                    "comments": "comments1",
+                    "note": "note1"
                 },
                 {
                     "product_name": "Flood Light",
@@ -56,8 +56,8 @@ data = {
                     "uom": "PCS",
                     "sub_total": 1378,
                     "warranty": 3,
-                    "comments": "",
-                    "note": ""
+                    "comments": "comments2",
+                    "note": "note2"
                 }
             ]
         }
