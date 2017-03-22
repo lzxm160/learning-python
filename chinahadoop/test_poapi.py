@@ -148,10 +148,10 @@ gdn_data={
                         "sub_total": 689
                     }
                 ],
-                "created_by": "",
-                "approved_by": "",
-                "comments": "",
-                "note": ""
+                "created_by": "created_by",
+                "approved_by": "approved_by",
+                "comments": "comments",
+                "note": "note"
             }
         ]
     }
@@ -163,5 +163,5 @@ def test_gdn_data_api():
 	result = urllib2.urlopen(req, json_gdn_data)
 	print '\n'.join(result.readlines())
 if __name__ == '__main__':
-	# test_po_api()
-	test_gdn_data_api()
+	test_po_api()
+	# test_gdn_data_api()
