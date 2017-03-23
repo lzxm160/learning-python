@@ -221,11 +221,70 @@ def test_asio_process_online():
 		print '\n'.join(result.readlines())
 	finish=time()
 	print (finish-start)*1000/10,"ms"
+data = {
+    "request_system": 1,
+    "request_time": "2017-02-16 08:00:00",
+    "operation": "SubmitPO",
+    "data": {
+        "purchase_order": {
+            "company": "ReneSola France",
+            "bill_type": "Purchase Order",
+            "po_no": "PO-FR-20170216-0016",
+            "po_url": "/file/ci/CI-FR-20170226-000196.pdf",
+            "po_date": "2017-02-16 18:00:00",
+            "created_by": "Siyabonga gura",
+            "approved_by": "approved_by",
+            "status": 1,
+            "supplier": "Renesola Shanghai",
+            "requested_delivery_date": "2017-03-20 24:00:00",
+            "trade_term": "EXW",
+            "payment_terms": "payment_terms",
+            "ship_via": "Sea",
+            "export_country": "P.R.China",
+            "loading_port": "Shenzhen",
+            "import_country": "France",
+            "unloading_port": "Amsterdam",
+            "certificate": "certificate",
+            "total_quantity": 2400,
+            "total_amount": 5690.47,
+            "currency": "EUR",
+            "comments": "comments",
+            "note": "note",
+            "detail": [
+                {
+                    "product_name": "Highbay",
+                    "product_code": "RHB120X0302",
+                    "item_no": "3518020400845",
+                    "unit_price": 3.64,
+                    "quantity": 1000,
+                    "uom": "PCS",
+                    "sub_total": 3640,
+                    "warranty": 3,
+                    "comments": "comments1",
+                    "note": "note1"
+                },
+                {
+                    "product_name": "Flood Light",
+                    "product_code": "RFL400AK01D06",
+                    "item_no": "3518030601741",
+                    "unit_price": 6.89,
+                    "quantity": 200,
+                    "uom": "PCS",
+                    "sub_total": 1378,
+                    "warranty": 3,
+                    "comments": "comments2",
+                    "note": "note2"
+                }
+            ]
+        }
+    }
+}
+json_data = json.dumps(data)
 def test_single_mysql_time():
 	start=time()
 	for num in range(0,10):
 		req = urllib2.Request("http://172.18.100.85:9888/test_mysql_time")
-		result = urllib2.urlopen(req,"json_pdf_datajson_pdf_datajson_pdf_datajson_pdf_datajson_pdf_datajson_pdf_datajson_pdf_datajson_pdf_datajson_pdf_datajson_pdf_datajson_pdf_datajson_pdf_datajson_pdf_datajson_pdf_datajson_pdf_datajson_pdf_datajson_pdf_datajson_pdf_datajson_pdf_datajson_pdf_datajson_pdf_datajson_pdf_datajson_pdf_datajson_pdf_datajson_pdf_datajson_pdf_datajson_pdf_datajson_pdf_datajson_pdf_datajson_pdf_datajson_pdf_datajson_pdf_datajson_pdf_datajson_pdf_datajson_pdf_datajson_pdf_datajson_pdf_datajson_pdf_datajson_pdf_datajson_pdf_datajson_pdf_datajson_pdf_datajson_pdf_datajson_pdf_datajson_pdf_datajson_pdf_datajson_pdf_datajson_pdf_datajson_pdf_datajson_pdf_datajson_pdf_datajson_pdf_datajson_pdf_datajson_pdf_datajson_pdf_datajson_pdf_datajson_pdf_datajson_pdf_datajson_pdf_datajson_pdf_datajson_pdf_datajson_pdf_datajson_pdf_datajson_pdf_datajson_pdf_datajson_pdf_datajson_pdf_datajson_pdf_datajson_pdf_datajson_pdf_datajson_pdf_datajson_pdf_datajson_pdf_datajson_pdf_data")
+		result = urllib2.urlopen(req,json_data)
 		print '\n'.join(result.readlines())
 	finish=time()
 	print (finish-start)*1000/10,"ms"
