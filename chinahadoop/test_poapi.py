@@ -69,9 +69,12 @@ from time import time
 import commands
 
 def test_po_api():
+	start=time()
 	req = urllib2.Request("http://172.18.100.72:9888/po/submit")
 	result = urllib2.urlopen(req, json_data)
 	print '\n'.join(result.readlines())
+	finish=time()
+	print (finish-start)*1000,"ms"
 gdn_data={
     "request_system": 1,
     "request_time": "2017-02-16 08:00:00",
@@ -159,9 +162,12 @@ gdn_data={
 json_gdn_data = json.dumps(gdn_data,ensure_ascii=False)
 
 def test_gdn_data_api():
+	start=time()
 	req = urllib2.Request("http://172.18.100.72:9888/po/deliver_goods")
 	result = urllib2.urlopen(req, json_gdn_data)
 	print '\n'.join(result.readlines())
+	finish=time()
+	print (finish-start)*1000,"ms"
 if __name__ == '__main__':
 	test_po_api()
 	test_gdn_data_api()
