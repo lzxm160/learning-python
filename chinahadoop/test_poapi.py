@@ -148,8 +148,8 @@ gdn_data={
                         "sub_total": 689
                     }
                 ],
-                "created_by": "created_by",
-                "approved_by": "approved_by",
+                "created_by": "Siyabonga gura",
+                "approved_by": "Siyabonga gura",
                 "comments": "comments",
                 "note": "note"
             }
