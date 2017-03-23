@@ -13,7 +13,7 @@ data = {
         "purchase_order": {
             "company": "ReneSola France",
             "bill_type": "Purchase Order",
-            "po_no": "PO-FR-20170216-0013",
+            "po_no": "PO-FR-20170216-0014",
             "po_url": "/file/ci/CI-FR-20170226-000196.pdf",
             "po_date": "2017-02-16 18:00:00",
             "created_by": "Siyabonga gura",
@@ -84,7 +84,7 @@ gdn_data={
             {
                 "company": "ReneSola France",
                 "bill_type": "Goods Delivery Note",
-                "gdn_no": "GDN-FR-20170216-001014-006",
+                "gdn_no": "GDN-FR-20170216-001014-007",
                 "po_no": "PO-FR-20170216-001014",
                 "supplier": "Renesola Shanghai",
                 "buyer": "George Wang",
