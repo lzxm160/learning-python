@@ -221,8 +221,17 @@ def test_asio_process_online():
 		print '\n'.join(result.readlines())
 	finish=time()
 	print (finish-start)*1000/10,"ms"
+def test_single_mysql_time():
+	start=time()
+	for num in range(0,10):
+		req = urllib2.Request("http://172.18.100.85:9888/test_mysql_time")
+		result = urllib2.urlopen(req,"json_pdf_data")
+		print '\n'.join(result.readlines())
+	finish=time()
+	print (finish-start)*1000/10,"ms"
 if __name__ == '__main__':
 	# test_po_api()
+	test_single_mysql_time()
 	# test_asio_process_online()
 	# test_go_process_online()
 	# test_athenapdf()
