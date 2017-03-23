@@ -81,7 +81,7 @@ gdn_data={
             {
                 "company": "ReneSola France",
                 "bill_type": "Goods Delivery Note",
-                "gdn_no": "GDN-FR-20170216-001014-001",
+                "gdn_no": "GDN-FR-20170216-001014-002",
                 "po_no": "PO-FR-20170216-001014",
                 "supplier": "Renesola Shanghai",
                 "buyer": "George Wang",
@@ -112,8 +112,8 @@ gdn_data={
                     "invoice_type": 0,
                     "total_amount": 5690.47,
                     "currency": "EUR",
-                    "created_by": "created_by",
-                    "approved_by": "approved_by",
+                    "created_by": "Siyabonga gura",
+                    "approved_by": "Siyabonga gura",
                     "note": "note"
                 },
                 "packing_list": {
