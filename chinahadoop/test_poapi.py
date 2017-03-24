@@ -70,7 +70,7 @@ import commands
 
 def test_po_api():
 	start=time()
-	req = urllib2.Request("http://172.18.100.85:9888/po/submit")
+	req = urllib2.Request("http://172.18.100.72:9888/po/submit")
 	result = urllib2.urlopen(req, json_data)
 	print '\n'.join(result.readlines())
 	finish=time()
@@ -163,7 +163,7 @@ json_gdn_data = json.dumps(gdn_data,ensure_ascii=False)
 
 def test_gdn_data_api():
 	start=time()
-	req = urllib2.Request("http://172.18.100.85:9888/po/deliver_goods")
+	req = urllib2.Request("http://172.18.100.72:9888/po/deliver_goods")
 	result = urllib2.urlopen(req, json_gdn_data)
 	print '\n'.join(result.readlines())
 	finish=time()
