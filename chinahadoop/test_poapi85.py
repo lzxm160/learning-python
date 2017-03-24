@@ -13,7 +13,7 @@ data = {
         "purchase_order": {
             "company": "ReneSola France",
             "bill_type": "Purchase Order",
-            "po_no": "PO-FR-20170216-001014",
+            "po_no": "PO-FR-20170216-001111",
             "po_url": "/file/ci/CI-FR-20170226-000196.pdf",
             "po_date": "2017-02-16 18:00:00",
             "created_by": "Siyabonga gura",
@@ -68,13 +68,6 @@ from time import clock
 from time import time
 import commands
 
-def test_po_api():
-	start=time()
-	req = urllib2.Request("http://172.18.100.72:9888/po/submit")
-	result = urllib2.urlopen(req, json_data)
-	print '\n'.join(result.readlines())
-	finish=time()
-	print (finish-start)*1000,"ms"
 gdn_data={
     "request_system": 1,
     "request_time": "2017-02-16 08:00:00",
@@ -84,8 +77,8 @@ gdn_data={
             {
                 "company": "ReneSola France",
                 "bill_type": "Goods Delivery Note",
-                "gdn_no": "GDN-FR-20170216-001014-009",
-                "po_no": "PO-FR-20170216-001014",
+                "gdn_no": "GDN-FR-20170216-001111-009",
+                "po_no": "PO-FR-20170216-001111",
                 "supplier": "Renesola Shanghai",
                 "buyer": "George Wang",
                 "trade_term": "CIF",
@@ -161,13 +154,6 @@ gdn_data={
 }
 json_gdn_data = json.dumps(gdn_data,ensure_ascii=False)
 
-def test_gdn_data_api():
-	start=time()
-	req = urllib2.Request("http://172.18.100.72:9888/po/deliver_goods")
-	result = urllib2.urlopen(req, json_gdn_data)
-	print '\n'.join(result.readlines())
-	finish=time()
-	print (finish-start)*1000,"ms"
 def test_gdn_data_api85():
 	start=time()
 	req = urllib2.Request("http://172.18.100.85:9888/po/deliver_goods")
@@ -183,7 +169,5 @@ def test_po_api85():
 	finish=time()
 	print (finish-start)*1000,"ms"
 if __name__ == '__main__':
-	test_po_api()
-	test_gdn_data_api()
-	# test_po_api85()
-	# test_gdn_data_api85()
+	test_po_api85()
+	test_gdn_data_api85()
