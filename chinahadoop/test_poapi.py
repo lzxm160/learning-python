@@ -85,8 +85,8 @@ gdn_data={
             {
                 "company": "ReneSola France",
                 "bill_type": "Goods Delivery Note",
-                "gdn_no": "GDN-FR-20170216-001234-009",
-                "po_no": "PO-FR-20170216-001234",
+                "gdn_no": "GDN-FR-20170216-001235-009",
+                "po_no": "PO-FR-20170216-001235",
                 "supplier": "Renesola Shanghai",
                 "buyer": "George Wang",
                 "trade_term": "CIF",
