@@ -13,7 +13,7 @@ data = {
         "purchase_order": {
             "company": "ReneSola France",
             "bill_type": "Purchase Order",
-            "po_no": "PO-FR-20170216-001233",
+            "po_no": "PO-FR-20170216-001234",
             "po_url": "/file/ci/CI-FR-20170226-000196.pdf",
             "po_date": "2017-02-16 18:00:00",
             "created_by": "Siyabonga gura",
@@ -22,7 +22,7 @@ data = {
             "supplier": "Renesola Shanghai",
             "requested_delivery_date": "2017-03-20 24:00:00",
             "trade_term": "EXW",
-            "payment_terms": "payment_terms",
+            "payment_terms": "L/C|Credit Term",
             "ship_via": "Sea",
             "export_country": "P.R.China",
             "loading_port": "Shenzhen",
