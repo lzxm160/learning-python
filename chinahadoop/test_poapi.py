@@ -4,7 +4,7 @@
 import urllib2
 import json
 
-
+test_no="001274"
 data = {
     "request_system": 1,
     "request_time": "2017-02-16 08:00:00",
@@ -13,7 +13,7 @@ data = {
         "purchase_order": {
             "company": "ReneSola France",
             "bill_type": "Purchase Order",
-            "po_no": "PO-FR-20170216-001243",
+            "po_no": "PO-FR-20170216-"+test_no,
             "po_url": "/file/ci/CI-FR-20170226-000196.pdf",
             "po_date": "2017-02-16 18:00:00",
             "created_by": "Siyabonga gura",
@@ -22,7 +22,7 @@ data = {
             "supplier": "Renesola Shanghai",
             "requested_delivery_date": "2017-03-20 24:00:00",
             "trade_term": "EXW",
-            "payment_terms": "L/C|Credit Term",
+            "payment_terms": "L/C|30 Days EOM",
             "ship_via": "Sea",
             "export_country": "P.R.China",
             "loading_port": "Shenzhen",
@@ -85,8 +85,8 @@ gdn_data={
             {
                 "company": "ReneSola France",
                 "bill_type": "Goods Delivery Note",
-                "gdn_no": "GDN-FR-20170216-001243-009",
-                "po_no": "PO-FR-20170216-001243",
+                "gdn_no": "GDN-FR-20170216-"+test_no+"-009",
+                "po_no": "PO-FR-20170216-"+test_no,
                 "supplier": "Renesola Shanghai",
                 "buyer": "George Wang",
                 "trade_term": "CIF",
@@ -172,4 +172,4 @@ def test_gdn_data_api():
 
 if __name__ == '__main__':
 	test_po_api()
-	test_gdn_data_api()
+	# test_gdn_data_api()
