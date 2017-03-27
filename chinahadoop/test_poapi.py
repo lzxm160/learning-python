@@ -85,8 +85,8 @@ gdn_data={
             {
                 "company": "ReneSola France",
                 "bill_type": "Goods Delivery Note",
-                "gdn_no": "GDN-FR-20170216-001233-009",
-                "po_no": "PO-FR-20170216-001233",
+                "gdn_no": "GDN-FR-20170216-001234-009",
+                "po_no": "PO-FR-20170216-001234",
                 "supplier": "Renesola Shanghai",
                 "buyer": "George Wang",
                 "trade_term": "CIF",
@@ -172,4 +172,4 @@ def test_gdn_data_api():
 
 if __name__ == '__main__':
 	test_po_api()
-	# test_gdn_data_api()
+	test_gdn_data_api()
