@@ -28,7 +28,6 @@ data = {
             "loading_port": "Shenzhen",
             "import_country": "France",
             "unloading_port": "Amsterdam",
-            "certificate": "certificate",
             "total_quantity": 2400,
             "total_amount": 5690.47,
             "currency": "EUR",
@@ -43,6 +42,7 @@ data = {
                     "quantity": 1000,
                     "uom": "PCS",
                     "sub_total": 3640,
+                    "certificate": "certificate",
                     "warranty": 3,
                     "comments": "comments1",
                     "note": "note1"
@@ -55,6 +55,7 @@ data = {
                     "quantity": 200,
                     "uom": "PCS",
                     "sub_total": 1378,
+                    "certificate": "certificate",
                     "warranty": 3,
                     "comments": "comments2",
                     "note": "note2"
