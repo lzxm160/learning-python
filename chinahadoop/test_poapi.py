@@ -13,7 +13,7 @@ data = {
         "purchase_order": {
             "company": "ReneSola France",
             "bill_type": "Purchase Order",
-            "po_no": "PO-FR-20170216-001236",
+            "po_no": "PO-FR-20170216-001237",
             "po_url": "/file/ci/CI-FR-20170226-000196.pdf",
             "po_date": "2017-02-16 18:00:00",
             "created_by": "Siyabonga gura",
@@ -172,4 +172,4 @@ def test_gdn_data_api():
 
 if __name__ == '__main__':
 	test_po_api()
-	test_gdn_data_api()
+	# test_gdn_data_api()
