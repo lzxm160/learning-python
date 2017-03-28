@@ -4,7 +4,7 @@
 import urllib2
 import json
 
-test_no="001275"
+test_no="001282"
 data = {
     "request_system": 1,
     "request_time": "2017-02-16 08:00:00",
@@ -22,7 +22,7 @@ data = {
             "supplier": "Renesola Shanghai",
             "requested_delivery_date": "2017-03-20 24:00:00",
             "trade_term": "EXW",
-            "payment_terms": "L/C|30 Days EOM",
+            "payment_terms": "Bank Acceptance|45 Days Net",
             "ship_via": "Sea",
             "export_country": "P.R.China",
             "loading_port": "Shenzhen",
@@ -172,4 +172,4 @@ def test_gdn_data_api():
 
 if __name__ == '__main__':
 	test_po_api()
-	# test_gdn_data_api()
+	test_gdn_data_api()
