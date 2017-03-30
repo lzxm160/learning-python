@@ -4,7 +4,7 @@
 import urllib2
 import json
 
-test_no="001282"
+test_no="001290"
 data = {
     "request_system": 1,
     "request_time": "2017-02-16 08:00:00",
