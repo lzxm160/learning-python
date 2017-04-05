@@ -168,6 +168,19 @@ def test_po_api85():
 	print '\n'.join(result.readlines())
 	finish=time()
 	print (finish-start)*1000,"ms"
+gdn_data1={
+    "request_system": 1,
+    "request_time": "2017-02-16 08:00:00",
+    "operation": "DeliverGoods"}
+json_gdn_data1 = json.dumps(gdn_data1,ensure_ascii=False)
+def test_json():
+    start=time()
+    req = urllib2.Request("http://172.18.100.85:8877/json")
+    result = urllib2.urlopen(req, json_gdn_data1)
+    print '\n'.join(result.readlines())
+    finish=time()
+    print (finish-start)*1000,"ms"
 if __name__ == '__main__':
-	test_po_api85()
-	test_gdn_data_api85()
+	# test_po_api85()
+	# test_gdn_data_api85()
+   test_json() 

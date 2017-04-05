@@ -4,7 +4,7 @@
 import urllib2
 import json
 
-test_no="001290"
+test_no="001293"
 data = {
     "request_system": 1,
     "request_time": "2017-02-16 08:00:00",
@@ -76,6 +76,13 @@ def test_po_api():
 	print '\n'.join(result.readlines())
 	finish=time()
 	print (finish-start)*1000,"ms"
+def test_po_check():
+    start=time()
+    req = urllib2.Request("http://172.18.100.72:9888/po/check")
+    result = urllib2.urlopen(req, json_data)
+    print '\n'.join(result.readlines())
+    finish=time()
+    print (finish-start)*1000,"ms"
 gdn_data={
     "request_system": 1,
     "request_time": "2017-02-16 08:00:00",
@@ -171,5 +178,6 @@ def test_gdn_data_api():
 	print (finish-start)*1000,"ms"
 
 if __name__ == '__main__':
-	test_po_api()
-	test_gdn_data_api()
+	# test_po_api()
+	# test_gdn_data_api()
+   test_po_check() 
